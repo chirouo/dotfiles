@@ -2,6 +2,8 @@ inoremap cj <Esc>
 vnoremap cj <Esc>
 nnoremap cj <Esc>
 set tabstop=4
+set mouse=a
+set clipboard^=unnamed,unnamedplus
 
 
 
