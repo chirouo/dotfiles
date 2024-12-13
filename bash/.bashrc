@@ -117,8 +117,10 @@ if ! shopt -oq posix; then
 fi
 alias tmp='cd ~/tmp'
 alias ysyx='cd ~/ysyx'
+alias nv='cd ~/ysyx/ysyx-workbench/nvboard'
 alias v='vim'
 alias b='cd $OLDPWD'
 alias apti='sudo apt-get install'
 export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
 export PATH=$PATH:/home/gx/.local/bin/tldr
+set -o vi
