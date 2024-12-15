@@ -1,6 +1,11 @@
 inoremap cj <Esc>
 vnoremap cj <Esc>
 nnoremap cj <Esc>
+" 将 H 映射为移动到行首
+nnoremap H ^
+" 将 L 映射为移动到行尾
+nnoremap L $
+
 set tabstop=4
 set mouse=a
 set clipboard^=unnamed,unnamedplus

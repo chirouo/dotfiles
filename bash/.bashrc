@@ -123,6 +123,6 @@ alias v='vim'
 alias b='cd $OLDPWD'
 alias apti='sudo apt-get install'
 export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
-export NPC_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
+export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
 export PATH=$PATH:/home/gx/.local/bin/tldr
 set -o vi
