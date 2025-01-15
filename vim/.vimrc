@@ -5,6 +5,10 @@ nnoremap cj <Esc>
 nnoremap H ^
 " 将 L 映射为移动到行尾
 nnoremap L $
+" 映射 sh 到切换到左侧标签页
+nnoremap sh :tabprevious<CR>
+" 映射 sl 到切换到右侧标签页
+nnoremap sl :tabnext<CR>
 
 set tabstop=4
 set mouse=a
