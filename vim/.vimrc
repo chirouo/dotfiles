@@ -3,6 +3,10 @@ vnoremap cj <Esc>
 nnoremap cj <Esc>
 " 将 H 映射为移动到行首
 nnoremap H ^
+" 将 J 映射为5j
+nnoremap J 5j
+" 将 K 映射为5k
+nnoremap K 5k
 " 将 L 映射为移动到行尾
 nnoremap L $
 " 映射 sh 到切换到左侧标签页
