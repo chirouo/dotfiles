@@ -1,16 +1,32 @@
 # 设置默认行为，以防人们没有设置 core.autocrlf
 * text=auto
 
-# 明确声明应该规范化的文本文件
-*.json text
-*.md text
-*.bat text
-*.cmd text
-*.sh text eol=lf
-*.vim text
-*.conf text
+# Windows 特定文件使用 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
 
-# 不要修改这些文件的行尾符号
+
+# Unix 特定文件使用 LF
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.tmux.conf text eol=lf
+*.bashrc text eol=lf
+
+# 配置文件使用 LF
+*.json text eol=lf
+*.md text eol=lf
+*.vim text eol=lf
+*.vimrc text eol=lf
+*.conf text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# 二进制文件不修改行尾符号
 *.png binary
 *.jpg binary
-*.gif binary 
+*.gif binary
+*.ico binary
+*.zip binary
+*.pdf binary 

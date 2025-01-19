@@ -1,11 +1,12 @@
 {
-    // 编辑器基本设置
+    // ==================== 编辑器基础设置 ====================
     "editor.fontSize": 16,
     "editor.lineNumbers": "relative",
-    "editor.mouseWheelScrollSensitivity": 3,
-    "diffEditor.hideUnchangedRegions.enabled": true,
+    "files.eol": "\n",  // 使用 LF
+    "files.insertFinalNewline": true,  
+    "diffEditor.hideUnchangedRegions.enabled": true,        // 文件末尾自动插入换行符
 
-    // 主题和样式设置
+    // ==================== 工作区和主题设置 ====================
     "workbench.colorTheme": "GitHub Dark Default",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#cdfffc56",
@@ -29,6 +30,7 @@
         }
     },
 
+    // ==================== Vim 设置 ====================
     // Vim相关设置
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "c:\\Users\\26274\\.vimrc",
@@ -185,13 +187,13 @@
     ],
     "vim.leader": "<Space>",
 
-    // Python相关设置
+    // ==================== Python 设置 ====================
     "python.analysis.autoFormatStrings": true,
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.typeCheckingMode": "basic",
 
-    // 终端设置
+    // ==================== 终端设置 ====================
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.rightClickBehavior": "default",
     "terminal.integrated.defaultProfile.linux": "bash",
@@ -199,11 +201,11 @@
       "GX": "temp"
     },
 
-    // 文件浏览器设置
+    // ==================== 文件浏览器设置 ====================
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
 
-    // 其他工具设置
+    // ==================== 开发工具和扩展设置 ====================
     "cmake.configureOnOpen": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "cph.general.defaultLanguage": "cpp",
