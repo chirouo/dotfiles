@@ -120,8 +120,15 @@ alias ysyx='cd ~/ysyx'
 alias nv='cd ~/ysyx/ysyx-workbench/nvboard'
 alias v='vim'
 alias b='cd $OLDPWD'
-alias apti='sudo apt-get install'
+alias vtmux='vim ~/dotfiles/tmux/.tmux.conf'
+alias vvim='vim ~/dotfiles/vim/.vimrc'
+alias vbash='vim ~/dotfiles/bash/.bashrc'
+alias sbash='source ~/.bashrc'
 export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
 export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
-export PATH=$PATH:/home/gx/.local/bin/tldr
+export PATH=$PATH:/home/gx/.local/bin/tldr:/home/gx/tmp/fzf/bin
 set -o vi
+eval $(thefuck --alias fuck)
+eval $(fzf --bash)
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
