@@ -9,10 +9,15 @@ nnoremap J 5j
 nnoremap K 5k
 " 将 L 映射为移动到行尾
 nnoremap L $
-" 映射 sh 到切换到左侧标签页
-nnoremap sh :tabprevious<CR>
-" 映射 sl 到切换到右侧标签页
-nnoremap sl :tabnext<CR>
+" 映射 th 到切换到左侧标签页
+nnoremap th :tabprevious<CR>
+" 映射 tl 到切换到右侧标签页
+nnoremap tl :tabnext<CR>
+
+" 设置 leader 键为空格
+let mapleader=" 
+" 从寄存器0粘贴内容的映射（保存最近一次复制的内容）
+nnoremap <leader>p "0p
 
 set tabstop=4
 set mouse=a
