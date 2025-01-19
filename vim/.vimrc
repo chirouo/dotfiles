@@ -15,7 +15,7 @@ nnoremap th :tabprevious<CR>
 nnoremap tl :tabnext<CR>
 
 " 设置 leader 键为空格
-let mapleader=" 
+let mapleader=" "
 " 从寄存器0粘贴内容的映射（保存最近一次复制的内容）
 nnoremap <leader>p "0p
 
