@@ -1,0 +1,234 @@
+{
+    // 编辑器基本设置
+    "editor.fontSize": 16,
+    "editor.lineNumbers": "relative",
+    "editor.mouseWheelScrollSensitivity": 3,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    // 主题和样式设置
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#cdfffc56",
+        "editor.lineHighlightBorder": "#fcfcfc56",
+        "editorCursor.foreground": "#d1fa60"
+    },
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark Default]": {
+            "comments": {
+                "foreground": "#6dda6d",
+                "fontStyle": "italic"
+            }
+        },
+        "[Default Dark Modern]": {
+            "comments": "#00ff62",
+            "keywords": "#569cd6",
+            "variables": "#9cdcfe",
+            "strings": "#ff8000",
+            "functions": "#e2e297",
+            "numbers": "#ffb300"
+        }
+    },
+
+    // Vim相关设置
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "c:\\Users\\26274\\.vimrc",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.handleKeys": {
+        "<C-c>": false,
+        // "<C-x>": false,
+        // "<C-v>": false,
+        "<C-t>": false,
+        // "<C-a>": false,
+        "<C-f>": false,
+        "<C-p>": false,
+        // "<C-d>": false,
+        "<C-w>": false,
+        // "<C-o>": false,
+    },
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+          "before": ["<C-n>"],
+          "commands": [":nohl"] //清除高亮
+      },
+      {
+        "before": ["u"],
+        "after": [],
+        "commands": [
+          {
+            "command": "undo"   
+          }
+        ]
+      },
+      {
+        "before": ["<C-r>"],
+        "after": [],
+        "commands": [
+          {
+            "command": "redo"
+          }
+        ]
+      },
+      {
+        "before": ["J"],
+        "after": ["5", "j"]
+      },
+      {
+        "before": ["K"],
+        "after": ["5", "k"]
+      },
+      {
+        //== leader p d
+        "before": ["g", "p"],
+        "commands": ["editor.action.peekDefinition"]        //预览定义
+      },
+      {
+        "before": ["g", "i"],
+        "commands": ["editor.action.goToImplementation"]    //跳转实现
+      },
+      {
+        "before": ["g", "d"],
+        "commands": ["editor.action.revealDefinition"]      //跳转定义
+      },
+      {
+        "before": ["g", "b"],
+        "commands": ["workbench.action.navigateBack"]       //go back
+      },
+      {
+        "before": ["g", "f"],
+        "commands": ["workbench.action.navigateForward"]    //go forward
+      },
+      {
+        //vimrc 里面的不生效 不知道为啥，这里重新配置一下
+        "before": ["t", "l"],
+        "commands": [":tabnext"]
+      },
+      {
+        "before": ["t", "h"],
+        "commands": [":tabprev"]
+      },
+      {
+        "before": ["<Leader>", "p", "d"],
+        "commands": ["editor.action.peekDefinition"]
+      },
+      {
+        "before": ["<Leader>", "t", "b"],
+        "commands": ["editor.debug.action.toggleBreakpoint"]
+      },
+      //没成功过。不如esc啊
+      {
+        "before": ["<Leader>", "s", "f"],
+        "commands": ["togglePeekWidgetFocus"]
+      },
+      {
+        "before": ["<Leader>", "e", "n"],
+        "commands": ["editor.action.marker.next"]
+      },
+      {
+        "before": ["<Leader>", "e", "p"],
+        "commands": ["editor.action.marker.prev"]
+      },
+      {
+        //和keybinds中的ctrl j显示的内容是一样的，但是这里不会卡方框，
+        //后者会卡方框（但是可以在内容较多的情况下可以用hjkl滚动sroll）
+        "before": ["<Leader>", "s", "h"],               
+        "commands": ["editor.action.showHover"]
+      },
+      {
+        "before": ["<Leader>", "r"],
+        "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
+      },
+      {
+        "before": ["<Leader>", "j"],
+        // "after": ["J"]              //无效，被我的5j占用了
+        "commands": ["editor.action.joinLines"]
+      },
+      {
+        "before": ["<Leader>", "o", "f"],
+        "commands": ["workbench.explorer.fileView.focus"]
+      },
+      //不知道为啥 不生效
+      {
+        "before": ["<leader>p"],
+        "after": ["\"0p"]
+      },
+      // splits
+      { 
+        "before": ["<Leader>", "v"],
+        "commands": [":vsplit"] 
+      },
+      { 
+        "before": ["<Leader>", "s"],
+        "commands": [":split"] 
+      },
+      // panes
+      { 
+        "before": ["<Leader>", "h"],
+        "commands": ["workbench.action.focusLeftGroup"] 
+      },
+      { 
+        "before": ["<Leader>", "j"],
+        "commands": ["workbench.action.focusBelowGroup"] 
+      },
+      { 
+        "before": ["<Leader>", "k"],
+        "commands": ["workbench.action.focusAboveGroup"] 
+      },
+      { 
+        "before": ["<Leader>", "l"],
+        "commands": ["workbench.action.focusRightGroup"] 
+      }
+    ],
+    "vim.leader": "<Space>",
+
+    // Python相关设置
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+
+    // 终端设置
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.rightClickBehavior": "default",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.env.windows": {
+      "GX": "temp"
+    },
+
+    // 文件浏览器设置
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+
+    // 其他工具设置
+    "cmake.configureOnOpen": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "cph.general.defaultLanguage": "cpp",
+    "cph.general.firstTime": false,
+    "cph.language.cpp.SubmissionCompiler": "GNU G++14 6.4.0",
+    "cph.language.cpp.Args": "-std=c++14 -O2",
+    "git.openRepositoryInParentFolders": "always",
+    "remote.SSH.remotePlatform": {
+        "u22": "linux",
+        "hw-u22": "linux"
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "digital-ide.welcome.show": false,
+    "console-ninja.featureSet": "Community",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "makefile.configureOnOpen": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "hidden"
+}

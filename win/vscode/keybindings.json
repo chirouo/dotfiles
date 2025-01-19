@@ -1,0 +1,57 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+;",
+    "command": "extension.aceJump"
+  },
+  {
+    "key": "alt+;",
+    "command": "extension.aceJump.line"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.showDefinitionPreviewHover"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",  // Ctrl+B: 切换侧边栏显示/隐藏
+    "when": "!terminalFocus"  // 当不在终端中时生效
+  },
+  //配合上面的ctrl j 展示出的Hover(如果有滚动条使用的)话
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
+  },
+  // File Opts
+  {
+    "key": "alt+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "alt+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "alt+shift+d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus"
+  },
+]
