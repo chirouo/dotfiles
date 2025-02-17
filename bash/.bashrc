@@ -126,6 +126,7 @@ alias vbash='vim ~/dotfiles/bash/.bashrc'
 alias sbash='source ~/.bashrc'
 export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
 export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
+export NEMU_HOME=/home/gx/ysyx/PA/nemu
 export PATH=$PATH:/home/gx/.local/bin/tldr:/home/gx/tmp/fzf/bin
 set -o vi
 eval $(thefuck --alias fuck)
