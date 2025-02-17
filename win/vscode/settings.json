@@ -45,7 +45,7 @@
         // "<C-v>": false,
         "<C-t>": false,
         // "<C-a>": false,
-        "<C-f>": false,
+        //"<C-f>": false,
         "<C-p>": false,
         // "<C-d>": false,
         "<C-w>": false,
@@ -114,6 +114,10 @@
         "commands": [":tabprev"]
       },
       {
+        "before": ["<leader>", "w"],
+        "commands": [":w"]               // Space+w 保存文件
+      },
+      {
         "before": ["<Leader>", "p", "d"],
         "commands": ["editor.action.peekDefinition"]
       },
@@ -141,6 +145,7 @@
         "commands": ["editor.action.showHover"]
       },
       {
+        //打开最近打开的文件
         "before": ["<Leader>", "r"],
         "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
       },
@@ -231,6 +236,5 @@
     ],
     "makefile.configureOnOpen": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden"
+    "editor.minimap.enabled": false
 }
