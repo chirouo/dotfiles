@@ -3,8 +3,8 @@
     "editor.fontSize": 16,
     "editor.lineNumbers": "relative",
     "files.eol": "\n",  // 使用 LF
-    "files.insertFinalNewline": true,  
-    "diffEditor.hideUnchangedRegions.enabled": true,        // 文件末尾自动插入换行符
+    "files.insertFinalNewline": true,   // 文件末尾自动插入换行符
+    "diffEditor.hideUnchangedRegions.enabled": true,       
 
     // ==================== 工作区和主题设置 ====================
     "workbench.colorTheme": "GitHub Dark Default",
@@ -45,7 +45,7 @@
         // "<C-v>": false,
         "<C-t>": false,
         // "<C-a>": false,
-        "<C-f>": false,
+        //"<C-f>": false,
         "<C-p>": false,
         // "<C-d>": false,
         "<C-w>": false,
@@ -114,6 +114,10 @@
         "commands": [":tabprev"]
       },
       {
+        "before": ["<leader>", "w"],
+        "commands": [":w"]               // Space+w 保存文件
+      },
+      {
         "before": ["<Leader>", "p", "d"],
         "commands": ["editor.action.peekDefinition"]
       },
@@ -141,6 +145,7 @@
         "commands": ["editor.action.showHover"]
       },
       {
+        //打开最近打开的文件
         "before": ["<Leader>", "r"],
         "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
       },
@@ -197,10 +202,21 @@
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.rightClickBehavior": "default",
     "terminal.integrated.defaultProfile.linux": "bash",
+    
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": ["${env:windir}\\System32\\cmd.exe"],
+            "args": []
+        },
+        "PowerShell": {
+            "path": ["${env:windir}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"],
+            "args": []
+        }
+    },
     "terminal.integrated.env.windows": {
       "GX": "temp"
     },
-
     // ==================== 文件浏览器设置 ====================
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -232,5 +248,5 @@
     "makefile.configureOnOpen": true,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden"
+    "github.copilot.editor.enableAutoCompletions": false
 }

@@ -18,7 +18,8 @@ nnoremap tl :tabnext<CR>
 let mapleader=" "
 " 从寄存器0粘贴内容的映射（保存最近一次复制的内容）
 nnoremap <leader>p "0p
-
+" 保存
+nnoremap <leader>w :w<CR>
 set tabstop=4
 set mouse=a
 set clipboard^=unnamed,unnamedplus

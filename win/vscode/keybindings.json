@@ -54,4 +54,10 @@
     "command": "deleteFile",
     "when": "explorerViewletFocus"
   },
+  //终端
+  {
+  "key": "ctrl+l",
+  "command": "workbench.action.terminal.clear",  // Ctrl+B: 切换侧边栏显示/隐藏
+  "when": "terminalFocus"  // 当不在终端中时生效
+  },
 ]
