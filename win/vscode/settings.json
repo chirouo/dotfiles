@@ -230,8 +230,9 @@
     "cph.language.cpp.Args": "-std=c++14 -O2",
     "git.openRepositoryInParentFolders": "always",
     "remote.SSH.remotePlatform": {
-        "u22": "linux",
-        "hw-u22": "linux"
+      "u22": "linux",
+      "hw-u22": "linux",
+      "v100": "linux"
     },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
