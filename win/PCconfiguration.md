@@ -138,6 +138,7 @@ springboot2 mysql8 maven
 ## 网络环境配置
 
 - 访问github失败，DNS污染 github520项目
+- ClashVerge [clash全局扩展脚本防止部分网站使用代理访问 - HeX's Blog](https://hexiao2001.github.io/2024/12/24/clash全局扩展脚本防止部分网站使用代理访问/)
 
 # Cheat Sheet
 

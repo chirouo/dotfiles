@@ -41,11 +41,11 @@
     "vim.hlsearch": true,
     "vim.handleKeys": {
         "<C-c>": false,
-        // "<C-x>": false,
-        // "<C-v>": false,
+        "<C-x>": false,
+        "<C-v>": false,
         "<C-t>": false,
-        // "<C-a>": false,
-        //"<C-f>": false,
+        "<C-a>": false,
+        "<C-f>": false,
         "<C-p>": false,
         // "<C-d>": false,
         "<C-w>": false,
@@ -219,8 +219,10 @@
     "cph.language.cpp.Args": "-std=c++14 -O2",
     "git.openRepositoryInParentFolders": "always",
     "remote.SSH.remotePlatform": {
-        "u22": "linux",
-        "hw-u22": "linux"
+      "u22": "linux",
+      "hw-u22": "linux",
+      "v100": "linux",
+      "linaro": "linux"
     },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
