@@ -4,23 +4,11 @@
 
 - 右键：设置为win10样式
 
-  [反人类Win11之文件右键菜单改回Win10 - 知乎](https://zhuanlan.zhihu.com/p/524603591)
-
 - 触摸板：改三指当中指
 
 - 输入法：设置ctrl + space 切换 中英 
 
 - geek删除不需要的**微软自带的软件**
-
-- 使用Process Lasso软件 让edge、chrome关闭效率模式
-
-- edge浏览器网络卡顿：
-
-  - 1、更改网络适配器更改好用的dns（ipv4和v6都换，都换阿里的，提前cmd ping一下试一下，太原是用这个）
-    - 223.5.5.5 223.6.6.6 ipv6:2400:3200::1 2400:3200:baba::1 验证，打开CMD命令提示符，通过nslookup alidns.com 命令进行验证，若最终解析结果是配置的IPV4公共DNS（223.5.5.5或223.6.6.6）或IPV6公共DNS（2400:3200::1或2400:3200:baba::1）返回的，则说明配置成功
-  - 2、关闭浏览器设置隐私和安全的 使用安全的dns选项
-  - 3、找到你自己的网，然后打开属性，把ipv6的勾去掉。这套操作下来能解决90%问题
-
 
 ## 必用软件清单
 
@@ -88,7 +76,7 @@ linux：
 - Temp
 - 将SchoolStudy、Temp、用户文件夹固定到快速访问
 
-## windows右键“新建”自定义（管理员运行regedit）
+## windows右键“新建”自定义（regedit）
 
 [视频](https://www.bilibili.com/video/BV12g411F79m/):
 
@@ -98,18 +86,15 @@ linux：
 
    - FileName（新建模板文件，值填模板文件的路径）
 
-2. 通过改.md项的默认值"XX" + 新建一个项对应前面的默认值"XX",值填你想要的名字“yyy”
+2. 通过改.md项的默认值"XX" + 新建一个项对应前面的默认值"XX",值填你想要的名字“XX”
    - 修改新建项时项的名字
 
-3. 删除不需要的新建项：
-
-   通过改计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew
+3. 通过改计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew
    中的`class `
 
    - 排序 新建的项
-   - 删除 不需要的新建项
 
-   当然是这样是不够的，还得删除对应后缀的计算机\HKEY_CLASSES_ROOT\\.xx的ShellNew文件，否则重启后又有了
+   - 删除 不需要的新建项
 
    注：BMP文件不在class中，要想删除参考这篇[博客](https://www.cnblogs.com/[![img](https://i0.hdslb.com/bfs/reply/9f3ad0659e84c96a711b88dd33f4bc2e945045e0.png)live41](https://search.bilibili.com/all?from_source=webcommentline_search&keyword=live41&seid=6595502123390268598)/p/18214635)
 
@@ -121,10 +106,6 @@ linux：
 2. 方案二：和本节无关，实际内容是“自定义右键新建项”
 
 # 开发环境配置
-
-## conda环境配置
-
-要设置一下windows脚本严格程度，否则不成功
 
 ## 编辑器配置
 
@@ -158,7 +139,6 @@ springboot2 mysql8 maven
 
 - 访问github失败，DNS污染 github520项目
 - ClashVerge [clash全局扩展脚本防止部分网站使用代理访问 - HeX's Blog](https://hexiao2001.github.io/2024/12/24/clash全局扩展脚本防止部分网站使用代理访问/)
-- 配置wsl后锐捷多网卡经常卡虚拟网卡无法认证 https://blog.csdn.net/u011897679/article/details/114341688?fromshare=blogdetail&sharetype=blogdetail&sharerId=114341688&sharerefer=PC&sharesource=chirou_&sharefrom=from_link
 
 # Cheat Sheet
 
