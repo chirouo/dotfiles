@@ -129,8 +129,13 @@ export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
 export NEMU_HOME=/home/gx/ysyx/PA/nemu
 export PATH=$PATH:/home/gx/.local/bin/tldr:/home/gx/tmp/fzf/bin
 set -o vi
+export PATH="$HOME/anaconda3/bin:$PATH"
 eval $(thefuck --alias fuck)
 eval $(fzf --bash)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 sudo service ssh start
+export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=~/anaconda3/bin:$PATH
+eval "$(lua ~/software/z.lua  --init bash once enhanced)"   # BASH 初始化
