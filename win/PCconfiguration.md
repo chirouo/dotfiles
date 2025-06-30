@@ -14,13 +14,6 @@
 
 - 使用Process Lasso软件 让edge、chrome关闭效率模式
 
-- edge浏览器网络卡顿：
-
-  - 1、更改网络适配器更改好用的dns（ipv4和v6都换，都换阿里的，提前cmd ping一下试一下，太原是用这个）
-    - 223.5.5.5 223.6.6.6 ipv6:2400:3200::1 2400:3200:baba::1 验证，打开CMD命令提示符，通过nslookup alidns.com 命令进行验证，若最终解析结果是配置的IPV4公共DNS（223.5.5.5或223.6.6.6）或IPV6公共DNS（2400:3200::1或2400:3200:baba::1）返回的，则说明配置成功
-  - 2、关闭浏览器设置隐私和安全的 使用安全的dns选项
-  - 3、找到你自己的网，然后打开属性，把ipv6的勾去掉。这套操作下来能解决90%问题
-
 
 ## 必用软件清单
 
@@ -159,6 +152,12 @@ springboot2 mysql8 maven
 - 访问github失败，DNS污染 github520项目
 - ClashVerge [clash全局扩展脚本防止部分网站使用代理访问 - HeX's Blog](https://hexiao2001.github.io/2024/12/24/clash全局扩展脚本防止部分网站使用代理访问/)
 - 配置wsl后锐捷多网卡经常卡虚拟网卡无法认证 https://blog.csdn.net/u011897679/article/details/114341688?fromshare=blogdetail&sharetype=blogdetail&sharerId=114341688&sharerefer=PC&sharesource=chirou_&sharefrom=from_link
+- edge浏览器网络卡顿：
+
+  - 1、更改网络适配器更改好用的dns（ipv4和v6都换，都换阿里的，提前cmd ping一下试一下，太原是用这个）
+    - 223.5.5.5 223.6.6.6 ipv6:2400:3200::1 2400:3200:baba::1 验证，打开CMD命令提示符，通过nslookup alidns.com 命令进行验证，若最终解析结果是配置的IPV4公共DNS（223.5.5.5或223.6.6.6）或IPV6公共DNS（2400:3200::1或2400:3200:baba::1）返回的，则说明配置成功
+  - 2、关闭浏览器设置隐私和安全的 使用安全的dns选项
+  - 3、找到你自己的网，然后打开属性，把ipv6的勾去掉。这套操作下来能解决90%问题
 
 # Cheat Sheet
 
