@@ -133,3 +133,4 @@ eval $(thefuck --alias fuck)
 eval $(fzf --bash)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+sudo service ssh start
