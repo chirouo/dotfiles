@@ -129,7 +129,7 @@ export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
 export NEMU_HOME=/home/gx/ysyx/PA/nemu
 export PATH=$PATH:/home/gx/.local/bin/tldr:/home/gx/tmp/fzf/bin
 set -o vi
-export PATH="$HOME/anaconda3/bin:$PATH"
+# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
 eval $(thefuck --alias fuck)
 eval $(fzf --bash)
 
@@ -137,5 +137,20 @@ eval $(fzf --bash)
 sudo service ssh start
 export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PATH=~/anaconda3/bin:$PATH
 eval "$(lua ~/software/z.lua  --init bash once enhanced)"   # BASH 初始化
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/gx/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/gx/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/gx/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/gx/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
