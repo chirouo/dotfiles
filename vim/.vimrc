@@ -107,3 +107,17 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " terminal in vim by gx
 :tnoremap cj <C-\><C-n>
+
+
+" 递归查找子文件
+set path+=**
+" 展示match的文件列表
+set wildmenu
+
+" === 自动重载配置文件 ===
+augroup AutoReloadConfig
+    " 清除组内旧的自动命令，防止重复添加（非常重要！）
+    autocmd! 
+    " 当保存 (BufWritePost) .vimrc 时，自动 source 它，并打印提示
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC | echom "配置已重载！Config Reloaded!"
+augroup END

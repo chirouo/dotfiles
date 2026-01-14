@@ -162,3 +162,4 @@ export PATH="/home/gx/.pixi/bin:$PATH"
 eval $(thefuck --alias fuck)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
