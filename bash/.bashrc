@@ -115,29 +115,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias tmp='cd ~/tmp'
-alias ysyx='cd ~/ysyx'
-alias nv='cd ~/ysyx/ysyx-workbench/nvboard'
-alias v='vim'
-alias b='cd $OLDPWD'
-alias vtmux='vim ~/dotfiles/tmux/.tmux.conf'
-alias vvim='vim ~/dotfiles/vim/.vimrc'
-alias vbash='vim ~/dotfiles/bash/.bashrc'
-alias sbash='source ~/.bashrc'
-export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
-export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
-export NEMU_HOME=/home/gx/ysyx/PA/nemu
-export PATH=$PATH:/home/gx/.local/bin/tldr:/home/gx/tmp/fzf/bin
-set -o vi
-# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
-eval $(thefuck --alias fuck)
-eval $(fzf --bash)
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-sudo service ssh start
-export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-eval "$(lua ~/software/z.lua  --init bash once enhanced)"   # BASH 初始化
+
+
+
+
+
+
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -154,3 +140,25 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+
+export NPC_HOME=/home/gx/ysyx/ysyx-workbench/npc
+export NVBOARD_HOME=/home/gx/ysyx/ysyx-workbench/nvboard
+export NEMU_HOME=/home/gx/ysyx/PA/nemu
+
+set -o vi
+
+# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+eval "$(lua ~/software/z.lua  --init bash once enhanced)"   # BASH 初始化
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/home/gx/.pixi/bin:$PATH"
+
+
+
+eval $(thefuck --alias fuck)
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
